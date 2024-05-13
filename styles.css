@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Gideon+Roman&display=swap');
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 0;
+  height: 100vh;
+  justify-content: space-between;
+  font-family: "Gideon Roman", serif;
+  background-color: #A6A6A6;
+}
+
+header {
+  font-size: 1.1em;
+  text-align: center;
+  padding: 10px;
+  color: #D9D9D9;
+  text-transform: uppercase;
+  background-color: #595451;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 10px;
+  max-width: 400px;
+  margin: 0 auto;
+  border: 5px solid #403B38;
+  box-shadow: 5px 5px 3px #595451;
+}
+
+label {
+  color: #403B38;
+  text-transform: uppercase;
+  padding: 15px 0;
+  font-size: 1.1em;
+}
+
+input {
+  padding: 6px;
+  margin: 0 0 10px 0;
+  font-size: 1em;
+  background-color: #D9D9D9;
+}
+
+:focus {
+  outline: 3px solid #595451;
+}
+
+button {
+  width: 120px;
+  height: 30px;
+  cursor: pointer;
+  margin: 8px auto;
+  border-radius: 5px;
+  border: 3px solid #595451;
+  background-color: #D9D9D9;
+  color: #595451;
+  font-size: 1em;
+  letter-spacing: 1px;
+}
+
+button:hover {
+  background-color: #A6A6A6;
+  color: #D9D9D9;
+  transition: all .5s;
+}
+
+#output {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 10px;
+  max-width: 400px;
+  margin: 10px auto;
+  height: 80px;
+  opacity: 0;
+  border: 5px solid #403B38;
+  box-shadow: 5px 5px 3px #595451;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.5em;
+  letter-spacing: 1px;
+}
+
+#output.active {
+  opacity: 1;
+  transition: opacity all 1s;
+}
+
+footer {
+  color: #D9D9D9;
+  padding: 6px;
+  background-color: #595451;
+}
