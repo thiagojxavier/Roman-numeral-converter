@@ -1,6 +1,7 @@
 const numberInput = document.getElementById('number');
 const convertBtn = document.getElementById('convert-btn');
 const output = document.getElementById('output');
+const form = document.getElementById('form');
 
 const romanNumerals = [
   {
@@ -28,7 +29,8 @@ const romanNumerals = [
 
 const numberOfHouses = [returnsUnitNumbersInRoman, returnsDozensNumbersInRoman, returnsHundredsNumbersInRoman, returnsUnitOfThousandsNumbersInRoman];
 
-function handleResult() {
+function handleResult(event) {
+  event.preventDefault();
 
   output.classList.remove('active');
 
@@ -206,7 +208,9 @@ function showResult(resultInRomanNumerals) {
 
     const storeResultInReverseString = resultInReverseString(resultInRomanNumerals)
 
-    output.classList.add('active');
+    setTimeout(() => {
+      output.classList.add('active');
+    }, 250)
     output.textContent = storeResultInReverseString
 
     numberInput.value = ""
@@ -288,4 +292,4 @@ function resultInReverseString(result) {
   return arrayReverseInString
 }
 
-convertBtn.addEventListener('click', handleResult );
+form.addEventListener('submit', handleResult );

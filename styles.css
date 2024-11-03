@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Gideon+Roman&display=swap');
 
+:root {
+  --color-1: #313131;
+  --color-2: #4f4f4f;
+  --color-3: #929292;
+}
+
 *,
 ::after,
 ::before {
@@ -15,7 +21,7 @@ body {
   height: 100vh;
   justify-content: space-between;
   font-family: "Gideon Roman", serif;
-  background-color: #A6A6A6;
+  background-color: var(--color-3);
 }
 
 header {
@@ -24,7 +30,7 @@ header {
   padding: 10px;
   color: #D9D9D9;
   text-transform: uppercase;
-  background-color: #595451;
+  background-color: var(--color-1);
 }
 
 form {
@@ -34,12 +40,12 @@ form {
   padding: 10px;
   max-width: 400px;
   margin: 0 auto;
-  border: 5px solid #403B38;
-  box-shadow: 5px 5px 3px #595451;
+  border: 5px solid var(--color-1);
+  box-shadow: 5px 5px 3px var(--color-2);
 }
 
 label {
-  color: #403B38;
+  color: var(--color-1);
   text-transform: uppercase;
   padding: 15px 0;
   font-size: 1.1em;
@@ -71,7 +77,7 @@ button {
 
 button:hover {
   background-color: #A6A6A6;
-  color: #D9D9D9;
+  color: #fff;
   transition: all .5s;
 }
 
@@ -84,21 +90,24 @@ button:hover {
   margin: 10px auto;
   height: 80px;
   opacity: 0;
-  border: 5px solid #403B38;
+  border: 5px solid var(--color-1);
   box-shadow: 5px 5px 3px #595451;
   justify-content: center;
   text-align: center;
   font-size: 1.5em;
   letter-spacing: 1px;
+  visibility: hidden;
+  transition: all .7s;
 }
 
 #output.active {
+  display: flex;
   opacity: 1;
-  transition: opacity all 1s;
+  visibility: visible;
 }
 
 footer {
   color: #D9D9D9;
   padding: 6px;
-  background-color: #595451;
+  background-color: var(--color-1);
 }
